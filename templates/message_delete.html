@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Message{% endblock title %}
+
+{% block page_content %}
+<h3>Delete message</h3>
+
+<form method="post">
+
+    <p><strong>Author name:</strong> {{ message.author_name }}</p>
+
+    <p><strong>Author email:</strong> {{ message.email }}</p>
+
+    <p><strong>Message: </strong>{{ message.message }}</p>
+
+    <button type="submit">Delete this message</button>
+</form>
+{% endblock page_content %}

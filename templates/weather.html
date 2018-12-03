@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Weather{% endblock title %}
+
+{% block page_content %}
+
+<h1>Current weather</h1>
+
+{% for item in weather_info %}
+    <h3>{{ item.name }}</h3>
+    <p>Description: {{ item.weather[0].description }}</p>
+    <p>Temperature: {{ item.main.temp }} °C</p>
+    <hr>
+{% endfor %}
+
+{% endblock page_content %}
